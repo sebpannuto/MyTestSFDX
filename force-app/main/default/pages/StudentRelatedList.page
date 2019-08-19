@@ -1,0 +1,7 @@
+<apex:page standardController="Student__c">
+    <apex:pageBlock >
+    	Displaying Information for {!Student__c.Name}
+    </apex:pageBlock>
+    <apex:relatedList list="Classes_Enrolled__r" title="Class Enrollments"/>
+	<apex:relatedList list="Grades__r" title="Grades"/>
+</apex:page>

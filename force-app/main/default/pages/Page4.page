@@ -1,0 +1,18 @@
+<apex:page controller="WizardDemoController">
+    <apex:form >
+    	
+    	<apex:pageBlock title="New Contact Wizard: Review">
+        	<apex:pageBlockButtons location="bottom">
+            	<apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:outputText value="Name: "/>
+                <apex:outputText value="{!name}"/>
+                <apex:outputText value="Email: "/>
+                <apex:outputText value="{!email}"/>
+                <apex:outputText value="Phone: "/>
+                <apex:outputText value="{!phone}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

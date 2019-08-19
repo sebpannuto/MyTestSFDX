@@ -1,0 +1,19 @@
+<aura:component controller="CreateCaseController" implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="newCase" type="Case" default="{'sobjectType':'Case'}"/>
+   	
+    
+	<lightning:card iconName="standard:case" title="Create Case">
+    	<div class="slds-form--stacked">
+        	<div class="slds-form-element">
+                Case Status: <force:inputField value="{!v.newCase.Status}"/>
+            </div>
+            <div class="slds-form-element">
+                Case Origin: <force:inputField value="{!v.newCase.Origin}"/>
+                
+            </div>
+            <div class="slds-form-element">
+                <lightning:button variant="brand" label="Save Case" onclick="{!c.saveCase}" />
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

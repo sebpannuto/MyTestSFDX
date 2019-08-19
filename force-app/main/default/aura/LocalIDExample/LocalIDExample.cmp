@@ -1,0 +1,6 @@
+<aura:component >
+    Your value: <ui:outputText aura:id="myText" value=""/>
+    <br/>
+    
+    <lightning:button label="Populate Text" onclick="{!c.changeText}" />
+</aura:component>

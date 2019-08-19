@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name="heightFeet" type="Integer"/>
+    <aura:attribute name="heightInches" type="Integer"/>
+    <aura:attribute name="totalFt" type="Double" />
+    <aura:attribute name="totalCm" type="Double" />
+    <aura:attribute name="totalM" type="Double" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.heightFeet}" action="{!c.process}" />
+    <aura:handler name="change" value="{!v.heightInches}" action="{!c.process}" />
+    
+    <div>
+        <p>Height Conversions</p>
+        <p>{!v.heightFeet}Feet &nbsp; {!v.heightInches}Inches</p>
+        <p>or &nbsp; {!v.totalFt} ft</p>
+        <p>or &nbsp; {!v.totalCm} cm</p>
+        <p>or &nbsp; {!v.totalM} m</p>
+    </div>
+    
+</aura:component>

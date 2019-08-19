@@ -1,0 +1,30 @@
+<apex:page standardController="Account"> <!-- All VF pages must have apex:page tag-->
+    <!--
+		It is best practice to use only one apex:form tag in a page or custom component.
+	-->
+    <apex:form >
+        <!-- 
+			An area of a page that uses styling similar to the appearance of a SF detail page
+		-->
+        <apex:pageBlock title="Account Information">
+			<apex:pageBlockSection title="Please Enter Account Information">
+                <!-- 
+					apex:inputField is a html input element for a value that corresponds to a field on a SF obejct.
+						This component respects the attributes of the associated field, including whether the field 
+						is required or unique
+				-->
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Site}"/>
+                <apex:inputField value="{!Account.Type}"/>
+                <apex:inputField value="{!Account.AccountNumber}"/>
+                
+            </apex:pageBlockSection>	
+            <!-- a set of buttons that are styled like SF buttons. This component MUST be a child of an apex:PageBlock -->
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+		        
+    </apex:form>
+    
+</apex:page>

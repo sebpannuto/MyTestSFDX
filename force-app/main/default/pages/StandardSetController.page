@@ -1,0 +1,42 @@
+<apex:page standardController="Account" recordSetVar="accounts" extensions="PaginationExtension" renderAs="">
+    
+    <apex:pageBlock title="Pagination">
+        <!-- value is what we're iterating over and var is how we reference each iteration -->
+        <apex:pageBlockTable value="{!displayedAccounts}" var="acc">
+            <apex:column value="{!acc.Name}"/>
+        </apex:pageBlockTable>
+        
+        <!-- Data Table not in SF style -->
+        <apex:dataTable value="{!displayedAccounts}" var="acc">
+        
+        <!-- A facet consists of content in an area of a VF component that provides contextual information
+			about the data that is presented in the component
+		-->
+        	<apex:facet name="caption">Data table caption</apex:facet>
+        	<apex:facet name="header">Data table Header</apex:facet>
+        	<apex:facet name="footer">Data table footer</apex:facet>
+            
+        	<apex:column >
+				<apex:facet name="header">Account Name</apex:facet>
+                <apex:outputText value="{!acc.Name}"/>
+            </apex:column>
+            
+            <apex:column value="{!acc.Type}"/>
+            
+        </apex:dataTable>
+        
+        <!--repeat-->
+        <apex:repeat value="{!displayedAccounts}" var="acc">
+            Account Name: <apex:outputText value="{!acc.Name}"/>
+            <br/>
+        </apex:repeat>
+        
+        <apex:pageBlockButtons >
+            <apex:form >
+                <apex:commandButton action="{!setController.previous}" value="Previous" disabled="{!NOT(setController.hasPrevious)}"/>
+                <apex:commandButton action="{!setController.next}" value="Next" disabled="{!NOT(setController.hasNext)}"/>
+            </apex:form>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+</apex:page>

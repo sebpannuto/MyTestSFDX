@@ -1,0 +1,17 @@
+<apex:page standardController="Class__c" recordSetVar="classes" extensions="ClassExtension">
+    
+    <apex:pageBlock title="Classes">
+        <!-- value is what we're iterating over and var is how we reference each iteration -->
+        <apex:form >
+		
+            <apex:pageBlockTable value="{!listViewClass}" var="cls">
+                <apex:column value="{!cls.Name}"/>
+                <apex:column value="{!cls.Class_Subject__c}"/>
+                <apex:column value="{!cls.Class_Topic__c}"/>
+                <apex:column value="{!cls.Start_Date__c}"/>
+            </apex:pageBlockTable>
+            
+        </apex:form>
+    </apex:pageBlock>
+    
+</apex:page>

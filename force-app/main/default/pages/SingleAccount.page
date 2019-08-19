@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="FindSingleAccount">
+    <apex:pageBlock title="Single Account Info">
+        <apex:pageBlockSection title="Account">
+            <apex:outputField value=" {!Account.Name}"/>
+            <apex:outputField value="{!Account.NumberofEmployees}"/>
+            <apex:outputField value="{!Account.BillingCity}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:relatedList list="Contacts" title="Contacts"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

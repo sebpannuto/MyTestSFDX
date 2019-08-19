@@ -1,0 +1,6 @@
+<apex:page controller="MyCustomController"> <!-- Use the controller attribute to specify a custom controller -->
+    <apex:pageBlock >
+        <!-- read only display of a label and value for a field on a SF object -->
+        <apex:outputField value="{!myClass.Name}"/>
+    </apex:pageBlock>
+</apex:page>

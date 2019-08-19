@@ -1,0 +1,24 @@
+<aura:component >
+    <lightning:layout>
+        <lightning:layoutItem padding="around-small">
+            <lightning:icon iconName="standard:user" alternativeText="User"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="around-small">
+            <lightning:formattedName
+                                     firstName="Sebastian"
+                                     middleName="Leandro"
+                                     lastName="Pannuto"
+                                     informalName="Jeb"
+                                     salutation="Mr."
+                                     format="short"
+                                     />
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="around-small">
+            <lightning:formattedUrl 
+                                    value="https://www.Google.com" 
+                                    tooltip="Go to Google" 
+                                    label="Google" 
+                                    target="_blank" />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

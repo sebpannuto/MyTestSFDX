@@ -1,0 +1,5 @@
+<apex:page controller="WithSharingExample">
+    <apex:repeat value="{!classes}" var="c">
+        <apex:outputText value="{!c.Name}"/> <br/>
+    </apex:repeat>
+</apex:page>

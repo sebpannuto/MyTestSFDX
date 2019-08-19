@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="heightFeet" type="Integer" default="0"/>
+    <aura:attribute name="heightInches" type="Integer" default="0"/>
+    <aura:attribute name="birthDate" type="Date"/>
+    
+    
+    <h1>Height and Age Converter</h1>
+    <span>
+    <lightning:input type="date" value="{!v.birthDate}" />
+    <lightning:input type="number" value="{!v.heightFeet}"/>
+    <lightning:input type="number" value="{!v.heightInches}"/>
+    </span>
+    
+    <c:HeightConvertor heightFeet="{!v.heightFeet}" heightInches="{!v.heightInches}"/>
+    <c:AgeConvertor birthDate="{!v.birthDate}"/>
+    
+</aura:component>

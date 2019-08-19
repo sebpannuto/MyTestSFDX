@@ -1,0 +1,14 @@
+<apex:page Standardcontroller="Grade__c">
+    <apex:form >
+    	<apex:pageBlock title="Grade Information">
+        	<apex:pageBlockSection title="Please Enter Class Information">
+                <apex:inputField value="{!Grade__c.Grade__c}"/>
+            	<apex:inputField value="{!Grade__c.Assessment__c}"/>
+                <apex:inputField value="{!Grade__c.Student__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

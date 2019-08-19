@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="priority" 
+                    type="String"
+                    default="High"
+                    description="Priority to filter table by"/>
+    
+    <!-- Indicate that this component can fire the PriorityChangedEvent -->
+    <aura:registerEvent name="priorityChangeEvent" type="c:PriorityChangedEvent"/>
+
+    
+    <lightning:select label="Priority" required="true" value="{!v.priority}" onchange="{!c.priorityChanged}">
+    	<option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </lightning:select>
+</aura:component>

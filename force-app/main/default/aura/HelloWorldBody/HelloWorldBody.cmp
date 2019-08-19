@@ -1,0 +1,25 @@
+<aura:component >
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col 
+                    slds-size_1-of-12 
+                    slds-grid 
+                    slds-grid_vertical-align-center 
+                    slds-grid_align-center">
+            <lightning:helptext
+                                content="Choose your favorite color"
+                                />
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+            <lightning:select name="favoriteColor" label="Favorite Color" required="true">
+                <option value="">Choose One...</option>
+                <option value="1">Blue</option>
+                <option value="2">Green</option>
+                <option value="3">Yellow</option>
+                <option value="4">Red</option>
+                <option value="5">Purple</option>
+                <option value="6">Orange</option>
+            </lightning:select>
+        </div>
+        
+    </div>
+</aura:component>

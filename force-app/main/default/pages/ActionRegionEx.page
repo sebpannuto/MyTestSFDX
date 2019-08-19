@@ -1,0 +1,19 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageMessages id="errors"/>
+        <apex:pageBlock title="Account">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:actionRegion >
+                    <apex:inputField value="{!Account.Industry} " required="true">
+                        <apex:actionSupport action="{!quickSave}" reRender="errors, outputRegion" event="onchange"/>
+                    </apex:inputField>
+                </apex:actionRegion>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="outputRegion">
+                <apex:outputText value="{!Account.Name}"/>
+                <apex:outputText value="{!Account.Industry}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

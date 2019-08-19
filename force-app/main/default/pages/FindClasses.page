@@ -1,0 +1,18 @@
+<apex:page controller="FindMyClasses" docType="html-5.0">
+    <apex:form >
+    	<apex:pageBlock title="Please enter class name to search for">
+            <apex:pageBlockSection >
+                <apex:input type="text" value="{!className}" label="Class Name:"/>
+            </apex:pageBlockSection>
+        	<apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!findClasses}" value="Find Classes"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:pageBlock title="Classes Retrieved">
+    	<apex:pageBlockTable value="{!classes}" var="c">
+        	<apex:column value="{!c.Name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
